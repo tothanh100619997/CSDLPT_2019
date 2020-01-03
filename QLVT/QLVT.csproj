@@ -63,6 +63,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSListNVTrung.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSListNVTrung.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKho.Designer.cs">
+      <DependentUpon>frmKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +92,24 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVatTu.Designer.cs">
+      <DependentUpon>frmVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupFormNVTrung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupFormNVTrung.Designer.cs">
+      <DependentUpon>PopupFormNVTrung.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QL_VATUDataSet.Designer.cs">
@@ -88,14 +117,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QL_VATUDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SubFormCTDDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormCTDDH.Designer.cs">
+      <DependentUpon>SubFormCTDDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormDDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormDDH.Designer.cs">
+      <DependentUpon>SubFormDDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormPN.Designer.cs">
+      <DependentUpon>SubFormPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormPX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormPX.Designer.cs">
+      <DependentUpon>SubFormPX.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKho.resx">
+      <DependentUpon>frmKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoTaiKhoan.resx">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVatTu.resx">
+      <DependentUpon>frmVatTu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,6 +170,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubFormDDH.resx">
+      <DependentUpon>SubFormDDH.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>
@@ -119,6 +184,17 @@
     </None>
     <None Include="DS.xss">
       <DependentUpon>DS.xsd</DependentUpon>
+    </None>
+    <None Include="DSListNVTrung.xsc">
+      <DependentUpon>DSListNVTrung.xsd</DependentUpon>
+    </None>
+    <None Include="DSListNVTrung.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSListNVTrung.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSListNVTrung.xss">
+      <DependentUpon>DSListNVTrung.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

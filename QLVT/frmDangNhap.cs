@@ -37,6 +37,7 @@ namespace QLVT
         {   if(cbTenChiNhanh.SelectedValue != null)
             {
                 Program.servername = cbTenChiNhanh.SelectedValue.ToString();
+                
 
             }
         
@@ -68,7 +69,9 @@ namespace QLVT
             Program.myReader.Read();
 
 
-            Program.username = Program.myReader.GetString(0);     // Lay user name
+            Program.username = Program.myReader.GetString(0);
+            
+            // Lay user name
             if (Convert.IsDBNull(Program.username))
             {
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
@@ -79,6 +82,7 @@ namespace QLVT
             Program.myReader.Close();
             Program.conn.Close();
             //MessageBox.Show("Nhan vien - Nhom : " + Program.mHoten + " - " + Program.mGroup, "", MessageBoxButtons.OK);
+            Program.frmChinh = new frmMain();
             Program.frmChinh.MANV.Text  = "Mã nhân viên: " + Program.username;
             Program.frmChinh.HOTEN.Text = "Họ tên: " + Program.mHoten;
             Program.frmChinh.NHOM.Text  = "Nhóm: " + Program.mGroup;

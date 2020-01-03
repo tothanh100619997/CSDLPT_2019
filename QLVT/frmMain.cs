@@ -16,9 +16,10 @@ namespace QLVT
         public frmMain()
         {
             InitializeComponent();
-            frmNhanVien f = new frmNhanVien();
-            f.MdiParent = this;
-            f.Show();
+            Program.frmNV = new frmNhanVien();
+     
+            Program.frmNV.MdiParent = this;
+            Program.frmNV.Show();
         }
         private Form CheckExists(Type ftype)
         {
@@ -45,12 +46,15 @@ namespace QLVT
             if (dr == DialogResult.Yes)
             {
 
-                Application.Exit();
+                e.Cancel = false;
+                Program.frmLogin.Visible = true;
+
 
             }
             else
             {
                 e.Cancel = true;
+                
 
             }
         }
@@ -71,26 +75,53 @@ namespace QLVT
             if (frm != null) frm.Activate();
             else
             {
-                frmNhanVien f = new frmNhanVien();
-                f.MdiParent = this;
-                f.Show();
+                Program.frmNV = new frmNhanVien();
+                Program.frmNV.MdiParent = this;
+                Program.frmNV.Show();
             }
         }
 
         private void BtnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Hide();
-            Program.frmLogin.Visible = true;
+            this.Close();
+            
 
         }
 
+        private void BtnVatTu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmVatTu));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmVatTu f = new frmVatTu();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
 
+        private void BtnKho_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmKho));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmKho f = new frmKho();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
 
-
-
-
-
-
-
+        private void BtnTaoTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmTaoTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmTaoTaiKhoan f = new frmTaoTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

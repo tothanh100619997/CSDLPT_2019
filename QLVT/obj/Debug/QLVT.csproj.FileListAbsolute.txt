@@ -92,3 +92,7 @@ D:\CSDLPHANTAN\QLVT\QLVT\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
 D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.csproj.CopyComplete
 D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.exe
 D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.pdb
+D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.frmVatTu.resources
+D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.frmKho.resources
+D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.frmTaoTaiKhoan.resources
+D:\CSDLPHANTAN\QLVT\QLVT\obj\Debug\QLVT.SubFormDDH.resources

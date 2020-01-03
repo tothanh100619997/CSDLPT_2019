@@ -32,12 +32,38 @@ namespace QLVT
         public static String mGroup = "";
         public static String mHoten = "";
         public static int mChinhanh = 0;
-
+        public static int maNVChuyenCN;
+       
         public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
-        public static frmMain frmChinh;
+        public static PopupFormNVTrung popupFormNVTrung;
         public static frmDangNhap frmLogin;
+        public static frmMain frmChinh;
+        public static frmNhanVien frmNV;
+        public static SubFormDDH SubFormDDH;
+        public static SubFormCTDDH SubFormCTDDH;
+        public static SubFormPN SubFormPhieuNhap;
+   
 
+        public static int KetNoi(String tk, String mk)
+        {
+            if (Program.conn != null && Program.conn.State == ConnectionState.Open)
+                Program.conn.Close();
+            try
+            {
+                Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
+                      Program.database + ";User ID=" +
+                      tk + ";password=" + mk;
+                Program.conn.ConnectionString = Program.connstr;
+                Program.conn.Open();
+                return 1;
+            }
 
+            catch (Exception e)
+            {
+                MessageBox.Show("Kết nối Server thất bại!" + e.Message, "Cảnh báo", MessageBoxButtons.OK);
+                return 0;
+            }
+        }
         public static int KetNoi()
         {
             if (Program.conn != null && Program.conn.State == ConnectionState.Open)
@@ -94,7 +120,7 @@ namespace QLVT
 
             BonusSkins.Register();
             frmLogin = new frmDangNhap();
-            frmChinh = new frmMain();
+            
             
             Application.Run(frmLogin);
             
